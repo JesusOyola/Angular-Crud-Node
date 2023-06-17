@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -47,4 +48,14 @@ export class ProductService {
       product
     );
   }
+=======
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+
+  constructor() { }
+>>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
 }
