@@ -1,0 +1,49 @@
+<div class="row mt-1">
+  <div class="col-lg-4 offset-lg-4">
+    <div class="card text-white bg-secondary mb-3" style="max-width: 25rem">
+      <div class="card-header text-center">Agregar Producto</div>
+      <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="addProduct()">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Ingrese Nombre"
+            formControlName="name"
+          />
+          <span *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">El campo Nombre es <strong>requerido</strong></span>
+          <input
+            type="text"
+            class="form-control mt-2"
+            placeholder="Ingrese Descripción"
+            formControlName="description"
+          />
+          <span *ngIf="form.get('description')?.hasError('required') && form.get('description')?.touched">El campo Nombre es <strong>descripción</strong></span>
+          <input
+            type="number"
+            class="form-control mt-2"
+            placeholder="Ingrese Precio"
+            formControlName="price"
+          />
+          <span *ngIf="form.get('price')?.hasError('required') && form.get('price')?.touched">El campo Nombre es <strong>precio</strong></span>
+          <input
+            type="number"
+            class="form-control mt-2"
+            placeholder="Ingrese Stock"
+            formControlName="stock"
+          />
+          <span *ngIf="form.get('stock')?.hasError('required') && form.get('stock')?.touched">El campo Nombre es <strong>stock</strong></span>
+          <div class="row mt-2 text-center">
+            <div class="col-lg-6">
+              <button type="button" class="btn btn-secondary" routerLink="/">
+                Volver
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Aceptar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
