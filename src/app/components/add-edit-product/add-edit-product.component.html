@@ -1,4 +1,4 @@
-
+<app-navbar></app-navbar>
 <app-progress-bar *ngIf="loading"></app-progress-bar>
 <div *ngIf="!loading" class="row mt-1">
   <div class="col-lg-4 offset-lg-4">
@@ -36,7 +36,7 @@
           <span *ngIf="form.get('stock')?.hasError('required') && form.get('stock')?.touched">El campo Nombre es <strong>stock</strong></span>
           <div class="row mt-2 text-center">
             <div class="col-lg-6">
-              <button type="button" class="btn btn-secondary" routerLink="/">
+              <button type="button" class="btn btn-secondary" routerLink="/products">
                 Volver
               </button>
             </div>

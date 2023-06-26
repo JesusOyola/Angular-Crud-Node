@@ -73,7 +73,7 @@ export class AddEditProductComponent implements OnInit {
         this.toastr.info(`Producto ${product.name} modificado exitosamente.`, 'Producto Actualizado');
         this.loading = false;
         this.form.reset();
-        this.router.navigate(['/']);
+        this.router.navigate(['/products']);
       })
 
     }else{
@@ -82,7 +82,7 @@ export class AddEditProductComponent implements OnInit {
         this.toastr.success(`Producto ${product.name} agregado exitosamente.`, 'Producto Nuevo');
         this.loading = false;
         this.form.reset();
-        this.router.navigate(['/']);
+        this.router.navigate(['/products']);
       });
     }
 
