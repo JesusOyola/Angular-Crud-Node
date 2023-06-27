@@ -1,7 +1,9 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/interfaces/user';
+import { ErrorService } from 'src/app/services/error.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -13,11 +15,13 @@ export class SignInComponent implements OnInit {
   username: string = '';
   password: string = '';
   confirmPassword: string = '';
+  spinnerLoading: boolean = false;
 
   constructor(
     private toastr: ToastrService,
     private _userService: UserService,
-    private router: Router
+    private router: Router,
+    private _errorService: ErrorService
   ) {}
 
   ngOnInit(): void {}
@@ -48,12 +52,23 @@ export class SignInComponent implements OnInit {
       password: this.password,
     };
 
-    this._userService.signIn(user).subscribe((data) => {
-      this.toastr.success(
-        `El usuario ${this.username} fue registrado con éxito`,
-        'Usuario Registrado'
-      );
-      this.router.navigate(['/login'])
+    this.spinnerLoading = true;
+    this._userService.signIn(user).subscribe({
+      next: () => {
+        this.spinnerLoading = false;
+        this.toastr.success(
+          `El usuario ${this.username} fue registrado con éxito`,
+          'Usuario Registrado'
+        );
+        this.router.navigate(['/login']);
+      },
+      error: (err: HttpErrorResponse) => {
+        this.spinnerLoading = false;
+        this._errorService.msjError(err);
+      },
     });
   }
+
+  
+  
 }
