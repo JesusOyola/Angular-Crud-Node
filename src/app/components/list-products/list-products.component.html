@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 <app-navbar></app-navbar>
 <app-progress-bar *ngIf="loading"></app-progress-bar>
 <div *ngIf="!loading" class="container">
-=======
-<div class="container">
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
   <div class="title">
     <h4>Listado de Productos</h4>
     <button type="button" class="btn btn-primary" routerLink="/add">Agregar Producto</button>
   </div>
-<<<<<<< HEAD
   <table *ngIf="listProducts.length > 0" class="table table-hover">
-=======
-  <table class="table table-hover">
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
     <tr>
       <th scope="col">Nombre</th>
       <th scope="col">Descripción</th>
@@ -26,25 +18,14 @@
       <tr *ngFor="let product of listProducts" class="table-active">
         <td scope="row">{{ product.name }}</td>
         <td>{{ product.description }}</td>
-<<<<<<< HEAD
         <td>{{ product.price | currency }}</td>
         <td>{{ product.stock }}</td>
         <td>
           <button type="button" class="btn btn-info btn-sm" routerLink="/edit/{{product.id}}">Edit</button>
           <button (click)="removeProduct(product.id!)" type="button" class="btn btn-secondary btn-sm ms-2">Delete</button>
-=======
-        <td>{{ product.price }}</td>
-        <td>{{ product.stock }}</td>
-        <td>
-          <button type="button" class="btn btn-info btn-sm" routerLink="/edit/{{product.id}}">Edit</button>
-          <button type="button" class="btn btn-secondary btn-sm ms-2">Delete</button>
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
         </td>
       </tr>
     </tbody>
   </table>
-<<<<<<< HEAD
   <h5 *ngIf="listProducts.length == 0">No hay productos para mostrar</h5>
-=======
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
 </div>

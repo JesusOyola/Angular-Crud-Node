@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-<<<<<<< HEAD
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
-=======
-import { Product } from 'src/app/interfaces/product';
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
 
 @Component({
   selector: 'app-add-edit-product',
@@ -16,7 +12,6 @@ import { Product } from 'src/app/interfaces/product';
 })
 export class AddEditProductComponent implements OnInit {
   form: FormGroup;
-<<<<<<< HEAD
   loading: boolean = false;
   paramId!: number;
   operacion: string = 'Agregar ';
@@ -28,16 +23,12 @@ export class AddEditProductComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {
-=======
-  constructor(private fb: FormBuilder) {
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
     this.form = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
       price: [null, Validators.required],
       stock: [null, Validators.required],
     });
-<<<<<<< HEAD
     this.paramId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
   }
 
@@ -63,11 +54,6 @@ export class AddEditProductComponent implements OnInit {
   }
 
   
-=======
-  }
-
-  ngOnInit(): void {}
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
 
   addProduct() {
     /* console.log(this.form.value.name);
@@ -79,7 +65,6 @@ export class AddEditProductComponent implements OnInit {
       price: this.form.value.price,
       stock: this.form.value.stock,
     };
-<<<<<<< HEAD
     this.loading = true;
     if (this.paramId !== 0) {
       //Editar producto
@@ -102,8 +87,5 @@ export class AddEditProductComponent implements OnInit {
     }
 
    
-=======
-    console.log(product)
->>>>>>> 1f8f509 (Generacion de rutas, vistas y formulario en el frontend)
   }
 }
