@@ -3,3 +3,17 @@
     margin-right: 2rem;
     margin-left: 2rem;
 }
+.navbar-title{
+    width: 0;
+}
+
+@media (max-width: 576px) {
+    .navbar-title{
+        width: 50%;
+    }
+
+    .logout{
+        margin-right: 4rem;
+        margin-left: 1rem;
+    }
+}

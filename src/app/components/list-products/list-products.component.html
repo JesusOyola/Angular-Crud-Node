@@ -1,15 +1,12 @@
 <app-navbar></app-navbar>
 <app-progress-bar *ngIf="loading"></app-progress-bar>
-<div *ngIf="!loading" class="container">
-  <div class="title">
-    <h4>Listado de Productos</h4>
-    <button type="button" class="btn btn-primary" routerLink="/add">Agregar Producto</button>
-  </div>
+<div *ngIf="!loading" class="container list-product">
+  
   <table *ngIf="listProducts.length > 0" class="table table-hover">
     <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">Precio</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
       <th scope="col">Stock</th>
       <th scope="col"></th>
     </tr>
@@ -27,5 +24,8 @@
       </tr>
     </tbody>
   </table>
-  <h5 *ngIf="listProducts.length == 0">No hay productos para mostrar</h5>
+  <div class="add-product">
+    <button type="button" class="btn btn-primary" routerLink="/add">Add Product</button>
+  </div>
+  <h5 *ngIf="listProducts.length == 0">There are not products to show.</h5>
 </div>

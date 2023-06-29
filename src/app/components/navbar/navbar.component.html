@@ -1,15 +1,10 @@
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">CRUD Productos</a>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <form class="d-flex ms-auto">
-        <input
-          class="form-control ms-auto"
-          type="search"
-          placeholder="Search"
-        />
-      </form>
-    </div>
+<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+  <div class="container-fluid navbar-title">
+    <a class="navbar-brand" routerLink="/products"><h1>PRODUCTS</h1></a>
+
+    <div class="collapse navbar-collapse" id="navbarColor01"></div>
   </div>
-  <button type="button" class="btn btn-danger logout" (click)="logOut()">logOut</button>
+  <button type="button" class="btn btn-danger logout" (click)="logOut()">
+    Logout
+  </button>
 </nav>

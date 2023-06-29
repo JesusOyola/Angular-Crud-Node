@@ -3,7 +3,7 @@
 <div *ngIf="!loading" class="row mt-1">
   <div class="col-lg-4 offset-lg-4">
     <div class="card text-white bg-secondary mb-3" style="max-width: 25rem">
-      <div class="card-header text-center">{{operacion}} Producto</div>
+      <div class="card-header text-center">{{operacion}} Product</div>
       <div class="card-body">
         <form [formGroup]="form" (ngSubmit)="addProduct()">
           <input
@@ -37,11 +37,11 @@
           <div class="row mt-2 text-center">
             <div class="col-lg-6">
               <button type="button" class="btn btn-secondary" routerLink="/products">
-                Volver
+                Back
               </button>
             </div>
             <div class="col-lg-6">
-              <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Aceptar</button>
+              <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Done</button>
             </div>
           </div>
         </form>

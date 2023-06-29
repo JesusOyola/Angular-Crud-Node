@@ -37,7 +37,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
-      timeOut: 10000,
+      timeOut: 3000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }), // ToastrModule added

@@ -1,9 +1,9 @@
 
 
-.title{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.add-product{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
 }
+

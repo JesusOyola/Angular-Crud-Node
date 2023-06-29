@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div *ngIf="!spinnerLoading" class="body">
     <img class="logo" src="../../../assets/img/cuenta.png" alt="img login" />
-    <h3>Registrar Usuario</h3>
+    <h3>Register</h3>
     <div class="form-floating mb-3 mt-3">
       <input
         type="text"
@@ -9,7 +9,7 @@
         class="form-control"
         placeholder="Ingrese Usuario"
       />
-      <label>Usuario</label>
+      <label>User Name</label>
     </div>
     <div class="form-floating mb-3">
       <input
@@ -27,14 +27,14 @@
         class="form-control"
         placeholder="Ingrese Password Nuevamente"
       />
-      <label>Repetir Password</label>
+      <label>Confirm Password</label>
     </div>
     <div class="d-grid gap-2 mb-3">
       <button type="button" (click)="addUser()" class="btn btn-primary btn-lg">
-        Aceptar
+        Register
       </button>
     </div>
-    <a routerLink="/login">volver</a>
+    <a routerLink="/login">Back to Login</a>
   </div>
   <app-spinner *ngIf="spinnerLoading"></app-spinner>
 </div>
