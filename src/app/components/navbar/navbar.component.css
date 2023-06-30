@@ -4,7 +4,7 @@
     margin-left: 2rem;
 }
 .navbar-title{
-    width: 0;
+    width: 14rem;
 }
 
 @media (max-width: 576px) {
