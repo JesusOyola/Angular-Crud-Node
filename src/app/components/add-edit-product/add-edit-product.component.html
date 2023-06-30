@@ -12,28 +12,28 @@
             placeholder="Enter Name"
             formControlName="name"
           />
-          <span *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">El campo Nombre es <strong>requerido</strong></span>
+          <span *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched"> Name field is <strong>required</strong></span>
           <input
             type="text"
             class="form-control mt-2"
             placeholder="Enter Description"
             formControlName="description"
           />
-          <span *ngIf="form.get('description')?.hasError('required') && form.get('description')?.touched">El campo Descripción es <strong>requerido</strong></span>
+          <span *ngIf="form.get('description')?.hasError('required') && form.get('description')?.touched"> Description field is <strong>required</strong></span>
           <input
             type="number"
             class="form-control mt-2"
             placeholder="Enter Price"
             formControlName="price"
           />
-          <span *ngIf="form.get('price')?.hasError('required') && form.get('price')?.touched">El campo Precio es <strong>requerido</strong></span>
+          <span *ngIf="form.get('price')?.hasError('required') && form.get('price')?.touched"> Price field is <strong>required</strong></span>
           <input
             type="number"
             class="form-control mt-2"
             placeholder="Enter Stock"
             formControlName="stock"
           />
-          <span *ngIf="form.get('stock')?.hasError('required') && form.get('stock')?.touched">El campo Stock es <strong>requerido</strong></span>
+          <span *ngIf="form.get('stock')?.hasError('required') && form.get('stock')?.touched"> Stock field is <strong>required</strong></span>
           <div class="row mt-2 text-center">
             <div class="col-lg-6">
               <button type="button" class="btn btn-secondary" routerLink="/products">
